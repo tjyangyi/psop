@@ -1,4 +1,4 @@
-package com.fhzz.psopadmin.entity;
+package com.fhzz.psopadminapi.entity;
 
 import java.io.Serializable;
 

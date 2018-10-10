@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fhzz.psopadmin.dao.jpa.UserInfoDao;
-import com.fhzz.psopadmin.entity.UserInfo;
-import com.fhzz.psopadmin.service.user.UserInfoService;
+import com.fhzz.psopadminapi.entity.UserInfo;
+import com.fhzz.psopadminapi.service.UserInfoService;
 
 @RestController
 @RequestMapping("/user")
 public class UserInfoServiceImpl implements UserInfoService {
-    @Resource
-    private UserInfoDao userInfoDao;
-    
-    @Override
-    @RequestMapping("/findByUsername")
-    public UserInfo findByUsername(String username) {
-        return userInfoDao.findByUsername(username);
-    }
+	@Resource
+	private UserInfoDao userInfoDao;
+
+	@Override
+	@RequestMapping("/findByUsername")
+	public UserInfo findByUsername(String username) {
+		return userInfoDao.findByUsername(username);
+	}
 }

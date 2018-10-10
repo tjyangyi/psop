@@ -110,7 +110,7 @@ public class DataSource1Config {
 	@Bean(name = "masterEntityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean masterEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("masterDataSource") DataSource dataSource) {
-		return builder.dataSource(dataSource).packages("com.fhzz.psopadmin.entity") // 设置实体类所在位置
+		return builder.dataSource(dataSource).packages("com.fhzz.psopadminapi.entity") // 设置实体类所在位置
 				.persistenceUnit("masterPersistenceUnit").properties(getVendorProperties()).build();
 	}
 

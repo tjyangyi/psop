@@ -10,3 +10,8 @@ spring:
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@10.2.108.238:1521:ORCL
+    username: C##PSOPUSER
+    password: 123456

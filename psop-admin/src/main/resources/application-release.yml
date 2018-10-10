@@ -1,0 +1,26 @@
+server:
+  port: 8762
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+      name: psop-admin
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@10.2.108.238:1521:ORCL
+      username: C##PSOPUSER
+      password: 123456
+      logSlowSql: true
+  jpa:
+    show-sql: true
+      
+logging:
+  level:
+     com.fhzz.psopadmin.dao : debug
+     

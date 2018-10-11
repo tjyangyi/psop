@@ -1,12 +1,17 @@
-server:
-  port: 8765
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://10.2.212.245:8761/eureka/
+server:
+  port: 8769
 spring:
   application:
-    name: psop-web
-  thymeleaf:
-    cache: false
-    mode: LEGACYHTML5
+    name: psop-zuul
+zuul:
+  routes:
+    psop-admin:
+      path: /admin/**
+      serviceId: psop-admin
+    psop-index:
+      path: /index/**
+      serviceId: psop-index

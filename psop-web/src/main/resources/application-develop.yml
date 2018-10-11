@@ -3,10 +3,17 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://10.2.212.245:8761/eureka/
+  instance:
+    preferIpAddress: true
 spring:
   application:
     name: psop-web
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
+  datasource:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@10.2.212.245:1521:MEDB
+    username: PSOP
+    password: 123456

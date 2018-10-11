@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.fhzz.psopadminapi.entity.UserInfo;
+import com.fhzz.psopentity.entity.UserInfo;
 
 @FeignClient(value = "psop-zuul")
 public interface UserInfoService {

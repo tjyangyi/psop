@@ -1,4 +1,4 @@
-package com.fhzz.psopadminapi.entity;
+package com.fhzz.psopentity.entity;
 
 import javax.persistence.*;
 

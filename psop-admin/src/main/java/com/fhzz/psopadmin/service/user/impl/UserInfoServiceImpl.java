@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fhzz.psopadmin.dao.jpa.UserInfoDao;
-import com.fhzz.psopadminapi.entity.UserInfo;
 import com.fhzz.psopadminapi.service.UserInfoService;
+import com.fhzz.psopentity.entity.UserInfo;
 
 @RestController
 @RequestMapping("/user")

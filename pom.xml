@@ -18,6 +18,7 @@
 	</parent>
 
 	<modules>
+		<module>psop-entity</module>
 		<module>psop-web</module>
 		<module>psop-admin</module>
 		<module>psop-admin-api</module>

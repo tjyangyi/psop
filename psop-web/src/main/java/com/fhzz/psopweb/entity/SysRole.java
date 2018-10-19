@@ -13,13 +13,6 @@ public class SysRole implements Serializable{
 	// 角色 -- 权限关系：多对多关系;
 	private List<SysPermission> permissions;
 
-	// 用户 - 角色关系定义;
-	// @ManyToMany
-	// @JoinTable(name = "SysUserRole", joinColumns = { @JoinColumn(name =
-	// "roleId") }, inverseJoinColumns = {
-	// @JoinColumn(name = "id") })
-	// private List<UserInfo> userInfos;// 一个角色对应多个用户
-
 	public Integer getId() {
 		return id;
 	}

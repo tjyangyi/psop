@@ -1,0 +1,19 @@
+server:
+  port: 8765
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+spring:
+  application:
+    name: psop-web
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.2.108.238:3306/psopuser?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: Fhzz@123456
+    
+    

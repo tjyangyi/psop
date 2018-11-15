@@ -14,8 +14,8 @@ import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fhzz.psop.entity.SysPermission;
-import com.fhzz.psop.entity.SysRole;
+import com.fhzz.psop.entity.Permission;
+import com.fhzz.psop.entity.Role;
 import com.fhzz.psop.entity.UserInfo;
 import com.fhzz.psop.service.UserInfoService;
 
@@ -30,9 +30,9 @@ public class MyShiroRealm extends AuthorizingRealm {
 		logger.info("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
 		UserInfo userInfo = (UserInfo) principals.getPrimaryPrincipal();
-		for (SysRole role : userInfo.getRoleList()) {
+		for (Role role : userInfo.getRoles()) {
 			authorizationInfo.addRole(role.getRole());
-			for (SysPermission p : role.getPermissions()) {
+			for (Permission p : role.getPermissions()) {
 				authorizationInfo.addStringPermission(p.getPermission());
 			}
 		}
@@ -54,8 +54,8 @@ public class MyShiroRealm extends AuthorizingRealm {
 			return null;
 		}
 		SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(userInfo, // 用户名
-				userInfo.getPassword(), // 密码
-				ByteSource.Util.bytes(userInfo.getCredentialsSalt()), // salt=username+salt
+				userInfo.getCustPassword(), // 密码
+				null, // salt=username+salt
 				getName() // realm name
 		);
 		return authenticationInfo;

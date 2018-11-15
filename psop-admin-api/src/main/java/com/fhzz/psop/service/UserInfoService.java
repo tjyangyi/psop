@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fhzz.psop.entity.UserInfo;
 
-@FeignClient(value = "psop-zuul")
+@FeignClient(value = "psop-admin")
 public interface UserInfoService {
-	@RequestMapping(value = "/admin/user/findByUsername", method = RequestMethod.GET)
+	@RequestMapping(value = "/user/findByUsername", method = RequestMethod.GET)
 	UserInfo findByUsername(@RequestParam(value = "username") String username);
 }

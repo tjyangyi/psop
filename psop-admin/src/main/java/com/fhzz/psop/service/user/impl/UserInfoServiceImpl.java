@@ -18,6 +18,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 	@Override
 	@RequestMapping("/findByUsername")
 	public UserInfo findByUsername(String username) {
-		return userInfoDao.findByUsername(username);
+		return userInfoDao.findByCustName(username);
 	}
 }

@@ -36,10 +36,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  */
 @Configuration
-@MapperScan(basePackages = "com.fhzz.psopadmin.dao.mybatis", sqlSessionTemplateRef = "masterSqlSessionTemplate")
+@MapperScan(basePackages = "com.fhzz.psop.dao.mybatis", sqlSessionTemplateRef = "masterSqlSessionTemplate")
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "masterEntityManagerFactory", transactionManagerRef = "masterJPATransactionManager", basePackages = {
-		"com.fhzz.psopadmin.dao.jpa" }) // 设置Repository所在位置
+		"com.fhzz.psop.dao.jpa" }) // 设置Repository所在位置
 public class DataSource1Config {
 	@Autowired
 	private DruidDataSourceBuilder druidDataSourceBuilder;
@@ -110,7 +110,7 @@ public class DataSource1Config {
 	@Bean(name = "masterEntityManagerFactory")
 	public LocalContainerEntityManagerFactoryBean masterEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("masterDataSource") DataSource dataSource) {
-		return builder.dataSource(dataSource).packages("com.fhzz.psopentity.entity") // 设置实体类所在位置
+		return builder.dataSource(dataSource).packages("com.fhzz.psop.entity") // 设置实体类所在位置
 				.persistenceUnit("masterPersistenceUnit").properties(getVendorProperties()).build();
 	}
 

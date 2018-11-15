@@ -1,0 +1,31 @@
+server:
+  port: 8762
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+      name: psop-admin
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://10.2.108.238:3306/psopuser?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: Fhzz@123456
+      logSlowSql: true
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      
+logging:
+  level:
+     com.fhzz.psop.dao : debug
+     

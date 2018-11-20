@@ -18,6 +18,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.fhzz</groupId>
+			<artifactId>psop-activiti-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fhzz</groupId>
 			<artifactId>psop-admin-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

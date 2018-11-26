@@ -33,7 +33,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fhzz.psop.entity.Vacation;
 import com.fhzz.psop.util.CustomProcessDiagramGenerator;
 import com.fhzz.psop.util.ImageUtils;
 
@@ -80,10 +79,6 @@ public class ActivitiServiceImpl implements ActivitiService {
 		taskService.complete(currentTask.getId(), vars);
 	}
 
-	public List<ProcessInstance> ProcessInstances(String custId) {
-		List<ProcessInstance> instanceList = runtimeService.createProcessInstanceQuery().startedBy(custId).list();
-		return instanceList;
-	}
 
 	/**
 	 * 根据流程实例Id,获取实时流程图片

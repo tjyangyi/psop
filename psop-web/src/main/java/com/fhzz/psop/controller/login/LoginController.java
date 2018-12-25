@@ -1,17 +1,18 @@
 package com.fhzz.psop.controller.login;
 
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import springfox.documentation.annotations.ApiIgnore;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 @Controller
+@ApiIgnore
 public class LoginController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	

@@ -3,27 +3,27 @@
  */
 package com.fhzz.psop.controller.activiti;
 
+import com.fhzz.psop.service.ActivitiService;
+import com.fhzz.psop.util.ImageUtils;
+import com.fhzz.psop.util.ProcessKey;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.fhzz.psop.service.ActivitiService;
-import com.fhzz.psop.util.ImageUtils;
-import com.fhzz.psop.util.ProcessKey;
 
 /**
  * @author Administrator
  *
  */
 @RestController
+@ApiIgnore
 public class ActivitiController {
 
 	@Resource

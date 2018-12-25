@@ -11,4 +11,5 @@ public class PsopAdminApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PsopAdminApplication.class, args);
 	}
+
 }
